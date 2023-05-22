@@ -82,7 +82,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/cupcakes", async (req, res, next) => {
+app.post("/cupcakes", async (req, res, next) => {
   try {
     if (!req.user) {
       res.status(401).send({ error: "Unauthorized" });
